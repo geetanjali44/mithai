@@ -13,22 +13,36 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html {
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
+body {
+  margin: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   DESKTOP BASE
+========================= */
+
 .methai-header {
+  position: relative;
   width: 100%;
   height: 390px;
   background: #17243B;
-  position: relative;
+  border: 0;
+  box-shadow: none;
 }
 
+/* LOGO */
 .methai-logo {
   position: absolute;
   top: 60px;
-  left: 35%;
-  transform: translateX(-50%);
+  left: 15%;
   font-family: 'Kalam', cursive;
   font-size: 92px;
   font-weight: 700;
@@ -37,152 +51,7 @@ body {
   white-space: nowrap;
 }
 
-/* MOBILE RESPONSIVE */
-@media (max-width: 767px) {
-
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  body {
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  .methai-header {
-    width: 100%;
-    height: 350px;
-    background: #17243B;
-    position: relative;
-  }
-
-  .methai-logo {
-    position: absolute;
-        top: 50px;
-        left: 28%;
-        transform: none;
-        font-size: 52px;
-    line-height: 1.2;
-    white-space: nowrap;
-  }
-
-  .methai-cream {
-    width: 100%;
-    height: 100px;
-    overflow: hidden;
-    background-color: transparent;
-    background-image: none;
-    line-height: 0;
-  }
-
-  .methai-cream svg {
-    display: block;
-    width: 400px;
-    max-width: none;
-    height: 100px;
-  }
-
-}
-
-/* PREVENT MOBILE INPUT AUTO-ZOOM */
-@media (max-width: 767px) {
-  input,
-  select,
-  textarea {
-    font-size: 16px;
-  }
-}
-
-/* BOTH PC AND MOBILE */
-.methai-cream {
-  width: 100%;
-  height: 100px;
-  margin-top:-3px;
-  overflow: hidden;
-  background: transparent;
-  line-height: 0;
-}
-
-/* PC */
-@media (min-width: 768px) {
-  .methai-cream {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100'%3E%3Cpath fill='%2317243B' d='M0 0 H400 V18 C400 28 395 33 389 33 C383 33 379 28 379 18 V12 C379 6 371 6 371 12 V62 C371 81 347 81 347 62 V19 C347 9 337 9 337 19 V34 C337 50 317 50 317 34 V16 C317 8 307 8 307 16 V76 C307 96 281 96 281 76 V20 C281 10 271 10 271 20 V42 C271 56 251 56 251 42 V15 C251 7 241 7 241 15 V58 C241 76 219 76 219 58 V18 C219 9 209 9 209 18 V31 C209 47 189 47 189 31 V14 C189 6 179 6 179 14 V79 C179 98 153 98 153 79 V18 C153 9 143 9 143 18 V43 C143 59 123 59 123 43 V14 C123 6 113 6 113 14 V66 C113 85 89 85 89 66 V18 C89 9 79 9 79 18 V34 C79 49 59 49 59 34 V15 C59 7 49 7 49 15 V72 C49 92 23 92 23 72 V18 C23 9 13 9 13 18 V36 C13 48 0 48 0 36 Z'/%3E%3C/svg%3E");
-    background-size: 400px 100px;
-    background-repeat: repeat-x;
-  }
-
-  .methai-cream svg {
-    display: none;
-  }
-}
-
-/* MOBILE */
-@media (max-width: 767px) {
-  .methai-cream svg {
-    display: block;
-    width: 100%;
-    height: 100px;
-  }
-}
-
-
-
-@media (max-width: 767px) {
-
-  .methai-cream {
-    position: relative;
-    width: 100%;
-    height: 99px;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 0 !important;
-    box-shadow: none !important;
-    background: transparent !important;
-  }
-
-  .methai-cream svg {
-    display: block;
-    width: 400px;
-    height: 100px;
-    max-width: none;
-    border: 0 !important;
-  }
-
-}
-
-@media (max-width: 767px) {
-  .methai-header {
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-.methai-cream {
-  position: relative;
-  width: 105% !important;
-  margin-top: -2px !important;
-  height: 100px !important;
-  padding: 0;
-  overflow: hidden;
-  border: 0 !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-
-  .methai-cream svg {
-    display: block;
-    width: 400px;
-    max-width: none;
-    height: 100px;
-    border: 0 !important;
-  }
-}
-
-
-/* PC */
+/* TAGLINE */
 .methai-tagline {
   position: absolute;
   top: 180px;
@@ -193,49 +62,24 @@ body {
   font-size: 60px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  line-height: 1.2;
+  z-index: 3;
 }
 
-/* MOBILE */
-@media (max-width: 767px) {
-      .methai-tagline {
-        top: 120px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        padding: 0 10px;
-        text-align: center;
-        font-size: 30px;
-        white-space: nowrap;
-    }
-}
-
-
-
-/* PC */
+/* DELIVERY BOY */
 .methai-delivery-boy {
   position: absolute;
-    right: 15%;
-    top: 80%;
-    transform: translateY(-50%);
-    width: 400px;
+  right: 15%;
+  top: 80%;
+  transform: translateY(-50%);
+  width: 400px;
+  max-width: none;
   height: auto;
   object-fit: contain;
   z-index: 2;
 }
 
-/* MOBILE */
-@media (max-width: 767px) {
-  .methai-delivery-boy {
-        right: 50px;
-        top: 105%;
-        transform: translateY(-50%);
-        width: 300px;
-        height: auto;
-  }
-}
-
-
-/* PC */
+/* APP BUTTONS */
 .mithai-store-buttons {
   position: absolute;
   top: 280px;
@@ -249,6 +93,7 @@ body {
 .mithai-store-buttons a {
   display: block;
   line-height: 0;
+  flex-shrink: 0;
 }
 
 .mithai-store-buttons img {
@@ -259,54 +104,237 @@ body {
   border: 0;
 }
 
-/* MOBILE */
+/* =========================
+   CREAM BASE
+========================= */
+
+.methai-cream {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: -3px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  line-height: 0;
+}
+
+.methai-cream svg {
+  display: none;
+}
+
+/* DESKTOP REPEATING CREAM */
+@media (min-width: 768px) {
+  .methai-cream {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100'%3E%3Cpath fill='%2317243B' d='M0 0 H400 V18 C400 28 395 33 389 33 C383 33 379 28 379 18 V12 C379 6 371 6 371 12 V62 C371 81 347 81 347 62 V19 C347 9 337 9 337 19 V34 C337 50 317 50 317 34 V16 C317 8 307 8 307 16 V76 C307 96 281 96 281 76 V20 C281 10 271 10 271 20 V42 C271 56 251 56 251 42 V15 C251 7 241 7 241 15 V58 C241 76 219 76 219 58 V18 C219 9 209 9 209 18 V31 C209 47 189 47 189 31 V14 C189 6 179 6 179 14 V79 C179 98 153 98 153 79 V18 C153 9 143 9 143 18 V43 C143 59 123 59 123 43 V14 C123 6 113 6 113 14 V66 C113 85 89 85 89 66 V18 C89 9 79 9 79 18 V34 C79 49 59 49 59 34 V15 C59 7 49 7 49 15 V72 C49 92 23 92 23 72 V18 C23 9 13 9 13 18 V36 C13 48 0 48 0 36 Z'/%3E%3C/svg%3E");
+    background-size: 400px 100px;
+    background-repeat: repeat-x;
+  }
+}
+
+/* =========================
+   LARGE DESKTOP 1440+
+========================= */
+
+@media (min-width: 1440px) {
+  .methai-header {
+    height: 390px;
+  }
+
+  .methai-logo {
+    left: 15%;
+    font-size: 92px;
+  }
+
+  .methai-tagline {
+    left: 15%;
+    font-size: 60px;
+  }
+
+  .methai-delivery-boy {
+    right: 15%;
+    width: 400px;
+  }
+}
+
+/* =========================
+   LAPTOP 1024 - 1439
+========================= */
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .methai-header {
+    height: 360px;
+  }
+
+  .methai-logo {
+    top: 55px;
+    left: 8%;
+    font-size: 76px;
+  }
+
+  .methai-tagline {
+    top: 160px;
+    left: 8%;
+    font-size: clamp(32px, 3.5vw, 48px);
+  }
+
+  .methai-delivery-boy {
+    right: 5%;
+    top: 78%;
+    width: 330px;
+  }
+
+  .mithai-store-buttons {
+    top: 255px;
+    left: 12%;
+  }
+}
+
+/* =========================
+   TABLET 768 - 1023
+========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .methai-header {
+    height: 340px;
+  }
+
+  .methai-logo {
+    top: 45px;
+    left: 7%;
+    font-size: 65px;
+  }
+
+  .methai-tagline {
+    top: 140px;
+    left: 7%;
+    font-size: 35px;
+    max-width: 65%;
+  }
+
+  .methai-delivery-boy {
+    right: 2%;
+    top: 77%;
+    width: 280px;
+  }
+
+  .mithai-store-buttons {
+    top: 235px;
+    left: 7%;
+    gap: 10px;
+  }
+
+  .mithai-store-buttons img {
+    width: 135px;
+    height: 43px;
+  }
+}
+
+/* =========================
+   MOBILE 768 BELOW
+========================= */
+
 @media (max-width: 767px) {
+  .methai-header {
+    width: 100%;
+    height: 350px;
+  }
+
+  .methai-logo {
+    top: 50px;
+    left: 28%;
+    transform: none;
+    font-size: 52px;
+  }
+
+  .methai-tagline {
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+    font-size: clamp(20px, 7vw, 30px);
+    white-space: nowrap;
+  }
+
+  .methai-delivery-boy {
+    right: 50px;
+    top: 105%;
+    transform: translateY(-50%);
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+  }
+
   .mithai-store-buttons {
     top: 178px;
     left: 50%;
     transform: translateX(-50%);
     gap: 8px;
     white-space: nowrap;
+    max-width: 100%;
   }
 
   .mithai-store-buttons img {
     width: 125px;
     height: 38px;
   }
-}
 
-</style>
-
-<style>
-
-@media (max-width: 767px) {
-  html, body {
-    width: 100%;
-    margin: 0;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-
-  .methai-header,
+  /* MOBILE CREAM */
   .methai-cream {
-    max-width: 100%;
-    touch-action: manipulation;
+    width: 100%;
+    height: 100px;
+    margin-top: -2px;
+    padding: 0;
+    overflow: hidden;
+    background: transparent;
+    background-image: none;
   }
 
-  .methai-delivery-boy {
-    max-width: 100%;
+  .methai-cream svg {
+    display: block;
+    width: 400px;
+    max-width: none;
+    height: 100px;
+    border: 0;
   }
 
-  .mithai-store-buttons {
-    max-width: 100%;
-  }
-
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     font-size: 16px;
   }
 }
 
+/* =========================
+   SMALL MOBILE 375 BELOW
+========================= */
+
+@media (max-width: 375px) {
+  .methai-logo {
+    left: 22%;
+    font-size: 45px;
+  }
+
+  .methai-tagline {
+    font-size: 22px;
+  }
+
+  .methai-delivery-boy {
+    right: 25px;
+    width: 270px;
+  }
+
+  .mithai-store-buttons img {
+    width: 115px;
+    height: 36px;
+  }
+}
 </style>
+
 </head>
 
 <body>
