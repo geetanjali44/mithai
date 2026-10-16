@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
 
@@ -60,7 +61,7 @@ body {
   .methai-logo {
     position: absolute;
         top: 50px;
-        left: 25%;
+        left: 28%;
         transform: none;
         font-size: 52px;
     line-height: 1.2;
@@ -271,6 +272,37 @@ body {
 }
 
 </style>
+
+<style>
+
+@media (max-width: 767px) {
+  html, body {
+    width: 100%;
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  .methai-header,
+  .methai-cream {
+    max-width: 100%;
+    touch-action: manipulation;
+  }
+
+  .methai-delivery-boy {
+    max-width: 100%;
+  }
+
+  .mithai-store-buttons {
+    max-width: 100%;
+  }
+
+  input, textarea, select {
+    font-size: 16px;
+  }
+}
+
+</style>
 </head>
 
 <body>
@@ -375,7 +407,7 @@ body {
       </pattern>
     </defs>
 
-    <rect width="400" height="99"
+    <rect width="600" height="99"
       fill="url(#creamPattern)"/>
   </svg>
 </div>
