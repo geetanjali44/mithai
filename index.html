@@ -3,13 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<title>METHAI Navbar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 * {
@@ -18,194 +14,372 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
 }
 
-.methai-navbar {
+.methai-header {
   width: 100%;
+  height: 390px;
   background: #17243B;
-  padding: 16px 30px;
+  position: relative;
 }
 
-.methai-nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 35px;
-  width: 100%;
-}
-
-/* LOGO */
 .methai-logo {
+  position: absolute;
+  top: 60px;
+  left: 35%;
+  transform: translateX(-50%);
   font-family: 'Kalam', cursive;
-  font-size: 32px;
+  font-size: 92px;
   font-weight: 700;
   color: #E82B65;
+  line-height: 1.2;
   white-space: nowrap;
-  line-height: 1;
 }
 
-/* SEARCH */
-.methai-search {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  max-width: 650px;
-  height: 46px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 0 16px;
-  gap: 12px;
-}
-
-.methai-search i {
-  color: #777;
-  font-size: 18px;
-}
-
-.methai-search input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 14px;
-  min-width: 0;
-}
-
-/* RIGHT ACTIONS */
-.methai-actions {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-
-.methai-nav-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  background: transparent;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.methai-nav-btn i {
-  font-size: 21px;
-}
-
-.methai-mobile-menu,
-.methai-mobile-login,
-.methai-mobile-search {
-  display: none;
-}
-
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 767px) {
 
-  .methai-navbar {
-    padding: 16px 15px 14px;
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
-  .methai-nav-inner {
+  body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .methai-header {
+    width: 100%;
+    height: 350px;
+    background: #17243B;
     position: relative;
-    justify-content: space-between;
-    gap: 10px;
-    min-height: 38px;
   }
 
   .methai-logo {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 29px;
+        top: 50px;
+        left: 25%;
+        transform: none;
+        font-size: 52px;
+    line-height: 1.2;
+    white-space: nowrap;
   }
 
-  .methai-desktop-search,
-  .methai-actions {
+  .methai-cream {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: none;
+    line-height: 0;
+  }
+
+  .methai-cream svg {
+    display: block;
+    width: 400px;
+    max-width: none;
+    height: 100px;
+  }
+
+}
+
+/* PREVENT MOBILE INPUT AUTO-ZOOM */
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* BOTH PC AND MOBILE */
+.methai-cream {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background: transparent;
+  line-height: 0;
+}
+
+/* PC */
+@media (min-width: 768px) {
+  .methai-cream {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 100'%3E%3Cpath fill='%2317243B' d='M0 0 H400 V18 C400 28 395 33 389 33 C383 33 379 28 379 18 V12 C379 6 371 6 371 12 V62 C371 81 347 81 347 62 V19 C347 9 337 9 337 19 V34 C337 50 317 50 317 34 V16 C317 8 307 8 307 16 V76 C307 96 281 96 281 76 V20 C281 10 271 10 271 20 V42 C271 56 251 56 251 42 V15 C251 7 241 7 241 15 V58 C241 76 219 76 219 58 V18 C219 9 209 9 209 18 V31 C209 47 189 47 189 31 V14 C189 6 179 6 179 14 V79 C179 98 153 98 153 79 V18 C153 9 143 9 143 18 V43 C143 59 123 59 123 43 V14 C123 6 113 6 113 14 V66 C113 85 89 85 89 66 V18 C89 9 79 9 79 18 V34 C79 49 59 49 59 34 V15 C59 7 49 7 49 15 V72 C49 92 23 92 23 72 V18 C23 9 13 9 13 18 V36 C13 48 0 48 0 36 Z'/%3E%3C/svg%3E");
+    background-size: 400px 100px;
+    background-repeat: repeat-x;
+  }
+
+  .methai-cream svg {
     display: none;
   }
+}
 
-  .methai-mobile-menu,
-  .methai-mobile-login {
-    display: flex;
-  }
-
-  .methai-mobile-search {
-    display: flex;
+/* MOBILE */
+@media (max-width: 767px) {
+  .methai-cream svg {
+    display: block;
     width: 100%;
-    max-width: none;
-    margin-top: 16px;
-    height: 46px;
+    height: 100px;
   }
 }
-html {
-  touch-action: manipulation;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+
+
+
+@media (max-width: 767px) {
+
+  .methai-cream {
+    position: relative;
+    width: 100%;
+    height: 99px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .methai-cream svg {
+    display: block;
+    width: 400px;
+    height: 100px;
+    max-width: none;
+    border: 0 !important;
+  }
+
 }
 
-.methai-navbar {
-  touch-action: manipulation;
+@media (max-width: 767px) {
+  .methai-header {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .methai-cream {
+    position: relative;
+    margin-top: -2px !important;
+    height: 100px !important;
+    overflow: hidden;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+
+  .methai-cream svg {
+    display: block;
+    width: 400px;
+    max-width: none;
+    height: 100px;
+    border: 0 !important;
+  }
 }
 
-/* Prevent iPhone search input focus zoom */
-.methai-search input {
-  font-size: 16px !important;
+
+/* PC */
+.methai-tagline {
+  position: absolute;
+  top: 180px;
+  left: 15%;
+  margin: 0;
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
+/* MOBILE */
+@media (max-width: 767px) {
+      .methai-tagline {
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 30px;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* PC */
+.methai-delivery-boy {
+  position: absolute;
+    right: 15%;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 400px;
+  height: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .methai-delivery-boy {
+        right: 50px;
+        top: 105%;
+        transform: translateY(-50%);
+        width: 300px;
+        height: auto;
+  }
+}
+
+
+/* PC */
+.mithai-store-buttons {
+  position: absolute;
+  top: 280px;
+  left: 23%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.mithai-store-buttons a {
+  display: block;
+  line-height: 0;
+}
+
+.mithai-store-buttons img {
+  display: block;
+  width: 155px;
+  height: 48px;
+  object-fit: contain;
+  border: 0;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .mithai-store-buttons {
+    top: 178px;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .mithai-store-buttons img {
+    width: 125px;
+    height: 38px;
+  }
+}
+
 </style>
 </head>
 
 <body>
 
-<header class="methai-navbar">
+<header class="methai-header">
+  <div class="methai-logo">MITHAI</div>
+  <p class="methai-tagline">Snack Happy, Anytime!</p>
 
-  <div class="methai-nav-inner">
+<div class="mithai-store-buttons">
 
-    <!-- MOBILE MENU -->
-    <button class="methai-nav-btn methai-mobile-menu"
-            type="button" aria-label="Open menu">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+  <a href="YOUR_PLAY_STORE_APP_LINK"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img
+      src="google.avif"
+      alt="Get it on Google Play">
+  </a>
 
-    <!-- LOGO -->
-    <div class="methai-logo">MITHAI</div>
+  <a href="YOUR_APP_STORE_APP_LINK"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img
+      src="app.avif"
+      alt="Download on the App Store">
+  </a>
 
-    <!-- DESKTOP SEARCH -->
-    <div class="methai-search methai-desktop-search">
-      <i class="fa-solid fa-magnifying-glass"></i>
-      <input type="search" placeholder="Search for snacks, drinks, chocolates...">
-    </div>
+</div>
 
-    <!-- DESKTOP LOGIN + CART -->
-    <div class="methai-actions">
-      <button class="methai-nav-btn" type="button">
-        
-        <span>Login</span>
-      </button>
-
-      <button class="methai-nav-btn" type="button" aria-label="Cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <span>Cart</span>
-      </button>
-    </div>
-
-    <!-- MOBILE LOGIN -->
-    <button class="methai-nav-btn methai-mobile-login"
-            type="button" aria-label="Login">
-      <i class="fa-regular fa-user"></i>
-    </button>
-
-  </div>
-
-  <!-- MOBILE SECOND ROW SEARCH -->
-  <div class="methai-search methai-mobile-search">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="search" placeholder="Search your favourite snacks...">
-  </div>
-
+   <img
+    src="mithai-delivery.webp"
+    alt="MITHAI Delivery Boy"
+    class="methai-delivery-boy"
+  >
 </header>
+
+
+<div class="methai-cream">
+  <svg xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 400 100"
+       preserveAspectRatio="none">
+
+    <defs>
+      <pattern id="creamPattern"
+               x="0" y="0"
+               width="400" height="100"
+               patternUnits="userSpaceOnUse">
+
+        <path fill="#17243B" d="
+          M0 0 H400 V18
+          C400 28 395 33 389 33
+          C383 33 379 28 379 18
+          V12
+          C379 6 371 6 371 12
+          V62
+          C371 81 347 81 347 62
+          V19
+          C347 9 337 9 337 19
+          V34
+          C337 50 317 50 317 34
+          V16
+          C317 8 307 8 307 16
+          V76
+          C307 96 281 96 281 76
+          V20
+          C281 10 271 10 271 20
+          V42
+          C271 56 251 56 251 42
+          V15
+          C251 7 241 7 241 15
+          V58
+          C241 76 219 76 219 58
+          V18
+          C219 9 209 9 209 18
+          V31
+          C209 47 189 47 189 31
+          V14
+          C189 6 179 6 179 14
+          V79
+          C179 98 153 98 153 79
+          V18
+          C153 9 143 9 143 18
+          V43
+          C143 59 123 59 123 43
+          V14
+          C123 6 113 6 113 14
+          V66
+          C113 85 89 85 89 66
+          V18
+          C89 9 79 9 79 18
+          V34
+          C79 49 59 49 59 34
+          V15
+          C59 7 49 7 49 15
+          V72
+          C49 92 23 92 23 72
+          V18
+          C23 9 13 9 13 18
+          V36
+          C13 48 0 48 0 36
+          Z
+        "/>
+      </pattern>
+    </defs>
+
+    <rect width="400" height="99"
+      fill="url(#creamPattern)"/>
+  </svg>
+</div>
+
 
 </body>
 </html>
