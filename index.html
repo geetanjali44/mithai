@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>METHAI Navbar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.methai-navbar {
+  width: 100%;
+  background: #17243B;
+  padding: 16px 30px;
+}
+
+.methai-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  width: 100%;
+}
+
+/* LOGO */
+.methai-logo {
+  font-family: 'Kalam', cursive;
+  font-size: 32px;
+  font-weight: 700;
+  color: #E82B65;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* SEARCH */
+.methai-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 650px;
+  height: 46px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0 16px;
+  gap: 12px;
+}
+
+.methai-search i {
+  color: #777;
+  font-size: 18px;
+}
+
+.methai-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  min-width: 0;
+}
+
+/* RIGHT ACTIONS */
+.methai-actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.methai-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.methai-nav-btn i {
+  font-size: 21px;
+}
+
+.methai-mobile-menu,
+.methai-mobile-login,
+.methai-mobile-search {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  .methai-navbar {
+    padding: 16px 15px 14px;
+  }
+
+  .methai-nav-inner {
+    position: relative;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 38px;
+  }
+
+  .methai-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 29px;
+  }
+
+  .methai-desktop-search,
+  .methai-actions {
+    display: none;
+  }
+
+  .methai-mobile-menu,
+  .methai-mobile-login {
+    display: flex;
+  }
+
+  .methai-mobile-search {
+    display: flex;
+    width: 100%;
+    max-width: none;
+    margin-top: 16px;
+    height: 46px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="methai-navbar">
+
+  <div class="methai-nav-inner">
+
+    <!-- MOBILE MENU -->
+    <button class="methai-nav-btn methai-mobile-menu"
+            type="button" aria-label="Open menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- LOGO -->
+    <div class="methai-logo">MITHAI</div>
+
+    <!-- DESKTOP SEARCH -->
+    <div class="methai-search methai-desktop-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="search" placeholder="Search for snacks, drinks, chocolates...">
+    </div>
+
+    <!-- DESKTOP LOGIN + CART -->
+    <div class="methai-actions">
+      <button class="methai-nav-btn" type="button">
+        
+        <span>Login</span>
+      </button>
+
+      <button class="methai-nav-btn" type="button" aria-label="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+      </button>
+    </div>
+
+    <!-- MOBILE LOGIN -->
+    <button class="methai-nav-btn methai-mobile-login"
+            type="button" aria-label="Login">
+      <i class="fa-regular fa-user"></i>
+    </button>
+
+  </div>
+
+  <!-- MOBILE SECOND ROW SEARCH -->
+  <div class="methai-search methai-mobile-search">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="search" placeholder="Search your favourite snacks...">
+  </div>
+
+</header>
+
+</body>
+</html>
