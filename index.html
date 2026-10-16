@@ -710,7 +710,7 @@ background-repeat: repeat-x;
   align-items: flex-end;
   justify-content: flex-end;
 
-  transform: translateX(80px);
+  transform: translateX(50px);
 }
 
 .mithai-hungry-feature img {
@@ -886,6 +886,334 @@ background-repeat: repeat-x;
   }
 }
 
+
+/* ==========================
+   MITHAI PREMIUM FOOTER
+========================== */
+
+.mithai-footer {
+  width: 100%;
+  background: #17243B;
+  color: #FFFFFF;
+  padding: 65px 5% 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.mithai-footer-inner {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 35px;
+}
+
+/* BRAND */
+.mithai-footer-brand h2 {
+  margin: 0;
+  font-family: 'Kalam', cursive;
+  font-size: 42px;
+  font-weight: 700;
+  color: #E82B65;
+}
+
+.mithai-footer-brand h2 span {
+  color: #FFFFFF;
+}
+
+.mithai-footer-tagline {
+  color: #FFFFFF;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 8px 0 15px;
+}
+
+.mithai-footer-description {
+  color: #B8C2D1;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 260px;
+}
+
+/* FOOTER COLUMNS */
+.mithai-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.mithai-footer-column h3 {
+  margin: 0 0 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.mithai-footer-column > a,
+.mithai-footer-column > p {
+  color: #B8C2D1;
+  font-size: 14px;
+  line-height: 1.6;
+  text-decoration: none;
+  margin: 0;
+}
+
+.mithai-footer-column > a {
+  transition: color .25s ease;
+}
+
+.mithai-footer-column > a:hover {
+  color: #E82B65;
+}
+
+/* SOCIAL ICONS */
+.mithai-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mithai-footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #465169;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.mithai-footer-socials a:hover {
+  background: #E82B65;
+  border-color: #E82B65;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+}
+
+/* APP DOWNLOAD */
+.mithai-footer-column .mithai-download-title {
+  margin: 15px 0 0;
+}
+
+.mithai-footer-apps {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mithai-footer-apps a {
+  display: inline-flex;
+  padding: 0;
+  background: transparent;
+  text-decoration: none;
+}
+
+.mithai-footer-apps img {
+  display: block;
+  width: 135px;
+  height: 42px;
+  object-fit: contain;
+  transition: transform .25s ease;
+}
+
+.mithai-footer-apps a:hover img {
+  transform: scale(1.05);
+}
+
+/* COPYRIGHT */
+.mithai-footer-bottom {
+  max-width: 1250px;
+  margin: 55px auto 0;
+  padding: 22px 0;
+  border-top: 1px solid #354259;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.mithai-footer-bottom p {
+  margin: 0;
+  color: #AAB6C8;
+  font-size: 13px;
+}
+
+.mithai-footer-bottom span {
+  color: #E82B65;
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mithai-footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+
+  .mithai-footer {
+    padding: 40px 20px 0;
+  }
+
+  .mithai-footer-inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 18px;
+  }
+
+  .mithai-footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .mithai-footer-brand h2 {
+    font-size: 36px;
+  }
+
+  .mithai-footer-tagline {
+    font-size: 15px;
+  }
+
+  .mithai-footer-description {
+    font-size: 13px;
+  }
+
+  .mithai-footer-column {
+    gap: 11px;
+    min-width: 0;
+  }
+
+  .mithai-footer-column h3 {
+    font-size: 14px;
+  }
+
+  .mithai-footer-column > a,
+  .mithai-footer-column > p {
+    font-size: 12px;
+  }
+
+  /* CONNECT FULL WIDTH */
+  .mithai-footer-connect {
+    grid-column: 1 / -1;
+  }
+
+  .mithai-footer-socials {
+    gap: 10px;
+  }
+
+  .mithai-footer-socials a {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  .mithai-footer-apps {
+    gap: 10px;
+  }
+
+  .mithai-footer-apps img {
+    width: 130px;
+    height: 40px;
+  }
+
+  .mithai-footer-bottom {
+    margin-top: 35px;
+    padding: 20px 0;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .mithai-footer-bottom p {
+    font-size: 11px;
+  }
+}
+
+/* CONNECT + DOWNLOAD SIDE BY SIDE */
+.mithai-footer-connect {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 35px;
+  width: 100%;
+}
+
+.mithai-footer-social-block,
+.mithai-footer-download-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.mithai-footer-social-block h3,
+.mithai-footer-download-block h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.mithai-footer-social-block p {
+  margin: 0;
+  color: #B8C2D1;
+  font-size: 14px;
+}
+
+.mithai-footer-apps {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mithai-footer-apps img {
+  width: 125px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* DESKTOP: GIVE CONNECT SECTION MORE SPACE */
+@media (min-width: 1024px) {
+  .mithai-footer-inner {
+    grid-template-columns: 1.2fr 1fr 2.5fr;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .mithai-footer-connect {
+    grid-column: 1 / -1;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .mithai-footer-apps img {
+    width: 130px;
+    height: 40px;
+  }
+}
+.mithai-footer-download-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  transform: translateX(30px);
+}
+
+
+/* MOBILE ONLY */
+@media (max-width: 767px) {
+  .mithai-footer-download-block {
+    transform: translateX(0px);
+  }
+}
 
 </style>
 
@@ -1134,6 +1462,106 @@ background-repeat: repeat-x;
   </div>
 
 </section>
+
+
+
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- MITHAI FOOTER -->
+<footer class="mithai-footer">
+
+  <div class="mithai-footer-inner">
+
+    <!-- BRAND -->
+    <div class="mithai-footer-brand">
+      <h2>MITHAI<span></span></h2>
+
+      <p class="mithai-footer-tagline">
+        Snacks in Minutes.
+      </p>
+
+      <p class="mithai-footer-description">
+        Your favourite snacks, delivered fresh
+        and fast to your doorstep.
+      </p>
+    </div>
+
+   
+
+    <!-- INFORMATION -->
+    <div class="mithai-footer-column">
+      <h3>Information</h3>
+
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/refund-policy">Refund Policy</a>
+      <a href="/support">Help & Support</a>
+    </div>
+
+    <!-- CONNECT -->
+    
+
+<div class="mithai-footer-column mithai-footer-connect">
+
+  <!-- SOCIAL MEDIA -->
+  <div class="mithai-footer-social-block">
+    <h3>Connect With Us</h3>
+    <p>Andhra Pradesh, India</p>
+
+    <div class="mithai-footer-socials">
+      <a href="#" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+
+      <a href="#" aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+
+      <a href="#" aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- APP DOWNLOAD BESIDE SOCIAL MEDIA -->
+  <div class="mithai-footer-download-block">
+    <h3>Download Our App</h3>
+
+    <div class="mithai-footer-apps">
+      <a href="#" aria-label="Google Play">
+        <img src="google.avif"
+             alt="Get it on Google Play">
+      </a>
+
+      <a href="#" aria-label="App Store">
+        <img src="app.avif"
+             alt="Download on the App Store">
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+  </div>
+
+  <!-- BOTTOM COPYRIGHT -->
+  <div class="mithai-footer-bottom">
+
+    <p>
+      © 2026 MITHAI. All rights reserved.
+    </p>
+
+    <p>
+      Made with <span>♥</span> for snack lovers.
+    </p>
+
+  </div>
+
+</footer>
+
 
 <script>
 (function () {
