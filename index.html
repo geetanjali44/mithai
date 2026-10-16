@@ -342,6 +342,551 @@ background-repeat: repeat-x;
     height: 36px;
   }
 }
+
+
+/* MITHAI 3D CAROUSEL */
+
+.mithai-3d-section {
+  width: 100%;
+  padding: 85px 0 45px;
+  background: white;
+  overflow: hidden;
+}
+
+.mithai-3d-viewport {
+  width: 100%;
+  overflow: hidden;
+  padding: 55px 0 20px;
+}
+
+.mithai-3d-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  will-change: transform;
+}
+
+.mithai-3d-slide {
+  position: relative;
+  flex: 0 0 350px;
+  width: 350px;
+  height: 340px;
+  display: flex;
+  align-items: flex-end;
+
+  opacity: 0.4;
+  filter: blur(3px);
+  transform: scale(0.85);
+
+  transition:
+    opacity 0.7s ease,
+    filter 0.7s ease,
+    transform 0.7s ease;
+}
+
+.mithai-3d-slide.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+/* CARD BACKGROUND */
+.mithai-3d-card {
+  width: 100%;
+  height: 250px;
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    #FFFFFF,
+    #FFE1EC
+  );
+  border: 1px solid #F8CCDC;
+  box-shadow: 0 15px 30px rgba(23,36,59,0.12);
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 25px 12px;
+}
+
+.mithai-3d-card h3 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #17243B;
+  font-size: 21px;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* POP-OUT IMAGE */
+.mithai-3d-art {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150px;
+  line-height: 1.2;
+  z-index: 3;
+  filter: drop-shadow(0 15px 10px rgba(0,0,0,0.18));
+  pointer-events: none;
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mithai-3d-slide {
+    flex-basis: 290px;
+    width: 290px;
+    height: 300px;
+  }
+
+  .mithai-3d-card {
+    height: 220px;
+  }
+
+  .mithai-3d-art {
+    font-size: 125px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .mithai-3d-section {
+    padding: 95px 0 35px;
+  }
+
+  .mithai-3d-viewport {
+    padding-top: 40px;
+  }
+
+  .mithai-3d-track {
+    gap: 14px;
+  }
+
+  .mithai-3d-slide {
+    flex-basis: 75vw;
+    width: 75vw;
+    height: 265px;
+  }
+
+  .mithai-3d-card {
+    height: 195px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+  }
+
+  .mithai-3d-card h3 {
+    font-size: 17px;
+  }
+
+  .mithai-3d-art {
+    font-size: 110px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mithai-3d-slide,
+  .mithai-3d-track {
+    transition: none !important;
+  }
+}
+
+
+.mithai-3d-art img {
+  display: block;
+  width: 830px;
+  height: 230px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 10px rgba(0,0,0,0.15));
+}
+
+@media (max-width: 767px) {
+  .mithai-3d-art img {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+
+/* MITHAI 3D SECTION HEADING */
+
+.mithai-3d-heading {
+  width: 100%;
+  text-align: center;
+  padding: 0 15px 20px;
+}
+
+.mithai-3d-heading h2 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #17243B;
+}
+
+.mithai-3d-heading h2 span {
+  color: #E82B65;
+  font-family: kalam;
+}
+
+.mithai-3d-heading p {
+  margin: 12px 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #17243B;
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mithai-3d-heading h2 {
+    font-size: 36px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .mithai-3d-heading {
+    padding: 0 12px 15px;
+  }
+
+  .mithai-3d-heading h2 {
+    font-size: 28px;
+  }
+
+  .mithai-3d-heading h2 span {
+    display: block;
+  }
+
+  .mithai-3d-heading p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+}
+
+/* HUNGRY SECTION */
+.mithai-hungry-section {
+  width: 100%;
+  padding: 55px 0 0;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* HEADING */
+.mithai-hungry-heading {
+  text-align: center;
+  padding: 0 15px;
+  margin-bottom: 35px;
+}
+
+.mithai-hungry-heading h2 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  color: #17243B;
+}
+
+.mithai-hungry-heading p {
+  margin: 12px 0 0;
+  font-family: Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #E82B65;
+}
+
+/* CENTER SNACKS + RIGHT IMAGE */
+.mithai-hungry-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: stretch;
+  gap: 15px;
+  padding-left: 5%;
+}
+
+/* 4 × 2 SNACK GRID */
+
+/* SNACK GRID */
+.mithai-snacks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px 10px;
+  align-content: center;
+  justify-items: center;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 15px 0 20px;
+ 
+  justify-self: center;
+  box-sizing: border-box;
+
+  /* MOVE ENTIRE GRID */
+  transform: translateX(100px);
+}
+
+/* SNACK IMAGES */
+.mithai-snack {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.mithai-snack img {
+  display: block;
+  width: 100%;
+  height: 155px;
+  object-fit: contain;
+}
+
+/* HANGING PRICE TAG */
+.mithai-price {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-top: -32px;
+  transform: translateX(40px);
+  padding: 10px 0 0;
+  box-sizing: border-box;
+
+  background: radial-gradient(
+    circle at 35% 25%,
+    #B75D56,
+    #762C2A 65%,
+    #481A1B
+  );
+
+  color: #FFFFFF;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  clip-path: polygon(
+    50% 0%, 55% 5%, 61% 0%, 66% 7%,
+    73% 3%, 76% 11%, 84% 9%, 86% 18%,
+    94% 20%, 93% 29%, 100% 35%, 95% 42%,
+    100% 50%, 95% 57%, 100% 65%, 92% 71%,
+    94% 80%, 85% 82%, 83% 91%, 75% 89%,
+    69% 97%, 62% 93%, 55% 100%, 50% 95%,
+    44% 100%, 38% 93%, 31% 97%, 25% 89%,
+    17% 91%, 15% 82%, 6% 80%, 8% 71%,
+    0% 65%, 5% 57%, 0% 50%, 5% 42%,
+    0% 35%, 7% 29%, 6% 20%, 14% 18%,
+    16% 9%, 24% 11%, 27% 3%, 34% 7%,
+    39% 0%, 45% 5%
+  );
+}
+
+/* GOLDEN HOLE */
+.mithai-price::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  background: #FFF3C2;
+  border: 2px solid #D7AE42;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* RIGHT CORNER IMAGE */
+.mithai-hungry-feature {
+  min-width: 0;
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  transform: translateX(80px);
+}
+
+.mithai-hungry-feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: right bottom;
+  transform: translateX(-10px);
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mithai-hungry-layout {
+    grid-template-columns: minmax(0, 1fr) 210px;
+    padding-left: 3%;
+  }
+
+  .mithai-snacks-grid {
+    gap: 18px 10px;
+  }
+
+  .mithai-snack img {
+    height: 125px;
+  }
+}
+
+/* MOBILE ONLY - DESKTOP UNCHANGED */
+@media (max-width: 767px) {
+
+  .mithai-hungry-section {
+    padding: 35px 0 30px;
+    overflow: hidden;
+  }
+
+  .mithai-hungry-heading {
+    text-align: center;
+    padding: 0 12px;
+    margin-bottom: 18px;
+  }
+
+  .mithai-hungry-heading h2 {
+    font-size: 28px;
+  }
+
+  .mithai-hungry-heading p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* IMAGE FIRST, SNACKS SECOND */
+  .mithai-hungry-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+    padding: 0;
+  }
+
+  /* HORIZONTAL CHARACTER IMAGE */
+  .mithai-hungry-feature {
+    order: 1;
+    display: flex;
+    width: 100%;
+    height: 190px;
+    min-height: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 12px;
+    box-sizing: border-box;
+    transform: none;
+  }
+
+  .mithai-hungry-feature img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+    transform: none;
+  }
+
+  /* ONLY 4 SNACKS - 2 PER ROW */
+  .mithai-snacks-grid {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 10px 18px 25px;
+    box-sizing: border-box;
+    transform: none;
+  }
+
+  .mithai-snack {
+    width: 100%;
+    min-width: 0;
+    align-items: center;
+  }
+
+  /* HIDE SNACKS 5 TO 8 ON MOBILE */
+  .mithai-snack:nth-child(n+5) {
+    display: none;
+  }
+
+  .mithai-snack img {
+    display: block;
+    width: 100%;
+    height: 125px;
+    object-fit: contain;
+  }
+
+  /* HANGING PRICE TAG */
+  .mithai-price {
+    width: 45px;
+    height: 45px;
+    margin-top: -30px;
+    padding: 8px 0 0;
+    font-size: 11px;
+  }
+
+  .mithai-price::after {
+    top: 5px;
+    width: 5px;
+    height: 5px;
+    border-width: 1px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .mithai-hungry-feature {
+    order: 1;
+    display: flex;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0;
+    transform: none;
+    box-sizing: border-box;
+  }
+
+  .mithai-hungry-feature picture {
+    display: block;
+    width: 100%;
+  }
+
+  .mithai-hungry-feature picture img {
+    display: block;
+    width: 70%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    padding-left:80px;
+    margin: 0;
+    transform: none;
+  }
+
+  .mithai-snacks-grid {
+    order: 2;
+  }
+}
+
+
 </style>
 
 </head>
@@ -454,5 +999,226 @@ background-repeat: repeat-x;
 </div>
 
 
+<section class="mithai-3d-section">
+  
+<div class="mithai-3d-heading">
+  <h2>
+    From Tap to
+    <span>Your Doorstep!</span>
+  </h2>
+  <p>You crave it. We make it happen.</p>
+</div>
+
+
+  <div class="mithai-3d-viewport">
+    <div class="mithai-3d-track" id="mithai3dTrack">
+
+      <!-- CARD 1 -->
+      <div class="mithai-3d-slide">
+        <div class="mithai-3d-card">
+          <h3>Place Your Order</h3>
+        </div>
+        <div class="mithai-3d-art">
+          <img src="img1.webp" alt="Place Your Order">
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="mithai-3d-slide">
+        <div class="mithai-3d-card">
+          <h3>Packing Your Snacks</h3>
+        </div>
+        <div class="mithai-3d-art">
+          <img src="img2.webp" alt="Packing Your Snacks">
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="mithai-3d-slide">
+        <div class="mithai-3d-card">
+          <h3>Out for Delivery</h3>
+        </div>
+        <div class="mithai-3d-art">
+          <img src="img3.webp" alt="Out for Delivery">
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="mithai-3d-slide">
+        <div class="mithai-3d-card">
+          <h3>Delivered with Love</h3>
+        </div>
+        <div class="mithai-3d-art">
+          <img src="img4.webp" alt="Delivered with Love">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+<section class="mithai-hungry-section">
+
+  <div class="mithai-hungry-heading">
+    <h2>Feeling Hungry?</h2>
+    <p>Your Next Snack Is Just a Tap Away!</p>
+  </div>
+
+  <div class="mithai-hungry-layout">
+
+    <!-- CENTER: 8 SNACKS WITH PRICES -->
+    <div class="mithai-snacks-grid">
+
+      <div class="mithai-snack">
+        <img src="img7.webp" alt="Snack 1">
+        <span class="mithai-price">₹49</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img8.webp" alt="Snack 2">
+        <span class="mithai-price">₹59</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img9.webp" alt="Snack 3">
+        <span class="mithai-price">₹79</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img10.webp" alt="Snack 4">
+        <span class="mithai-price">₹99</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img10.webp" alt="Snack 5">
+        <span class="mithai-price">₹39</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img9.webp" alt="Snack 6">
+        <span class="mithai-price">₹69</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img8.webp" alt="Snack 7">
+        <span class="mithai-price">₹89</span>
+      </div>
+
+      <div class="mithai-snack">
+        <img src="img7.webp" alt="Snack 8">
+        <span class="mithai-price">₹119</span>
+      </div>
+
+    </div>
+
+    <!-- RIGHT CORNER BIG PNG -->
+    
+<div class="mithai-hungry-feature">
+  <picture>
+    <!-- MOBILE IMAGE -->
+    <source
+      media="(max-width: 767px)"
+      srcset="img6.webp">
+
+    <!-- DESKTOP IMAGE -->
+    <img
+      src="img5.webp"
+      alt="MITHAI character looking at snacks">
+  </picture>
+</div>
+
+  </div>
+
+</section>
+
+<script>
+(function () {
+  const track = document.getElementById("mithai3dTrack");
+  if (!track) return;
+
+  const viewport = track.parentElement;
+  const originals = Array.from(track.children);
+  const count = originals.length;
+
+  if (!count) return;
+
+  // Duplicate before and after for forward-only looping
+  const before = originals.map(card => card.cloneNode(true));
+  const after = originals.map(card => card.cloneNode(true));
+
+  before.forEach(card => {
+    card.setAttribute("aria-hidden", "true");
+    track.insertBefore(card, originals[0]);
+  });
+
+  after.forEach(card => {
+    card.setAttribute("aria-hidden", "true");
+    track.appendChild(card);
+  });
+
+  const cards = Array.from(track.children);
+  let index = count;
+  let moving = false;
+
+  function update(animate = true) {
+    const card = cards[index];
+
+    const offset =
+      card.offsetLeft +
+      card.offsetWidth / 2 -
+      viewport.clientWidth / 2;
+
+    track.style.transition = animate
+      ? "transform 750ms cubic-bezier(.22,.68,.22,1)"
+      : "none";
+
+    track.style.transform =
+      `translate3d(${-offset}px, 0, 0)`;
+
+    cards.forEach((item, i) => {
+      item.classList.toggle("active", i === index);
+    });
+  }
+
+  update(false);
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (!reduceMotion) {
+    setInterval(() => {
+      if (moving) return;
+
+      moving = true;
+      index++;
+      update(true);
+    }, 3000);
+  }
+
+  track.addEventListener("transitionend", event => {
+    if (
+      event.target !== track ||
+      event.propertyName !== "transform"
+    ) return;
+
+    moving = false;
+
+    if (index >= count * 2) {
+      index -= count;
+      update(false);
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    update(false);
+  });
+})();
+</script>
+</body>
 </body>
 </html>
