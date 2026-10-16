@@ -42,13 +42,21 @@ body {
 .methai-logo {
   position: absolute;
   top: 60px;
-  left: 15%;
+  left: 2%;
+  transform: translateX(-50%);
   font-family: 'Kalam', cursive;
   font-size: 92px;
   font-weight: 700;
   color: #E82B65;
   line-height: 1.2;
   white-space: nowrap;
+}
+/* ONLY PC / LAPTOP */
+@media (min-width: 1024px) {
+  .methai-logo {
+    left: 25% !important;
+    transform: none !important;
+  }
 }
 
 /* TAGLINE */
@@ -203,26 +211,26 @@ body {
 
   .methai-logo {
     top: 45px;
-    left: 7%;
+    left: 18%;
     font-size: 65px;
   }
 
   .methai-tagline {
     top: 140px;
-    left: 7%;
+    left: 9%;
     font-size: 35px;
     max-width: 65%;
   }
 
   .methai-delivery-boy {
-    right: 2%;
-    top: 77%;
-    width: 280px;
+            right: 10%;
+        top: 77%;
+        width: 380px;
   }
 
   .mithai-store-buttons {
     top: 235px;
-    left: 7%;
+    left: 16%;
     gap: 10px;
   }
 
