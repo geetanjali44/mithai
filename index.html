@@ -3,7 +3,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 <title>METHAI Navbar</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
@@ -137,6 +139,20 @@ body {
     margin-top: 16px;
     height: 46px;
   }
+}
+html {
+  touch-action: manipulation;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.methai-navbar {
+  touch-action: manipulation;
+}
+
+/* Prevent iPhone search input focus zoom */
+.methai-search input {
+  font-size: 16px !important;
 }
 </style>
 </head>
